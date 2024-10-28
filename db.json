@@ -1,0 +1,243 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "product_name": "Custom Website Development",
+      "price": 5000,
+      "created_at": "2024-09-14T12:30:45Z"
+    },
+    {
+      "id": 2,
+      "product_name": "E-commerce Website Setup",
+      "price": 8000,
+      "created_at": "2024-09-15T09:00:00Z"
+    },
+    {
+      "id": 3,
+      "product_name": "Website Maintenance and Support",
+      "price": 1200,
+      "created_at": "2024-09-16T14:25:30Z"
+    },
+    {
+      "id": 5,
+      "product_name": "Responsive Web Design Service",
+      "price": 4000,
+      "created_at": "2024-09-18T16:10:50Z"
+    },
+    {
+      "id": 6,
+      "product_name": "Web Application Development",
+      "price": 10000,
+      "created_at": "2024-09-19T10:20:30Z"
+    },
+    {
+      "id": 7,
+      "product_name": "CMS Integration Service",
+      "price": 3500,
+      "created_at": "2024-09-20T13:50:45Z"
+    },
+    {
+      "id": 8,
+      "product_name": "API Development and Integration",
+      "price": 4500,
+      "created_at": "2024-09-21T15:30:20Z"
+    },
+    {
+      "id": 9,
+      "product_name": "UI/UX Design Service",
+      "price": 3000,
+      "created_at": "2024-09-22T17:10:15Z"
+    },
+    {
+      "id": 10,
+      "product_name": "Website Speed Optimization",
+      "price": 2200,
+      "created_at": "2024-09-23T08:45:00Z"
+    },
+    {
+      "product_name": "apple One",
+      "price": "1500",
+      "created_at": "2024-10-25T14:10:46.427Z",
+      "id": 11
+    }
+  ],
+  "vouchers": [
+    {
+      "voucher_id": "M2QCS8TRMGMG",
+      "customer_name": "kyaw",
+      "customer_email": "kyaw@gmail.com",
+      "sale_date": "2024-10-26",
+      "checked-checkbox": true,
+      "records": [
+        {
+          "id": 1729958863230,
+          "product": {
+            "id": 2,
+            "product_name": "E-commerce Website Setup",
+            "price": 8000,
+            "created_at": "2024-09-15T09:00:00Z"
+          },
+          "quantity": "1",
+          "cost": 8000,
+          "created_at": "2024-10-26T16:07:43.230Z"
+        },
+        {
+          "id": 1729958867575,
+          "product": {
+            "id": 3,
+            "product_name": "Website Maintenance and Support",
+            "price": 1200,
+            "created_at": "2024-09-16T14:25:30Z"
+          },
+          "quantity": "1",
+          "cost": 1200,
+          "created_at": "2024-10-26T16:07:47.575Z"
+        }
+      ],
+      "total": 9200,
+      "tax": 644.0000000000001,
+      "netTotal": 9844,
+      "id": 3
+    },
+    {
+      "voucher_id": "M2R42PJ9UVC8",
+      "customer_name": "aye",
+      "customer_email": "aye@gmail.com",
+      "sale_date": "2024-10-27",
+      "checked-checkbox": true,
+      "records": [
+        {
+          "id": 1730004630038,
+          "product": {
+            "id": 7,
+            "product_name": "CMS Integration Service",
+            "price": 3500,
+            "created_at": "2024-09-20T13:50:45Z"
+          },
+          "quantity": "1",
+          "cost": 3500,
+          "created_at": "2024-10-27T04:50:30.038Z"
+        }
+      ],
+      "total": 3500,
+      "tax": 245.00000000000003,
+      "netTotal": 3745,
+      "id": 4
+    },
+    {
+      "voucher_id": "M2R4FEV73YZD",
+      "customer_name": "John ",
+      "customer_email": "John@gmail.com",
+      "sale_date": "2024-10-30",
+      "checked-checkbox": true,
+      "records": [
+        {
+          "id": 1730005222397,
+          "product": {
+            "id": 9,
+            "product_name": "UI/UX Design Service",
+            "price": 3000,
+            "created_at": "2024-09-22T17:10:15Z"
+          },
+          "quantity": "1",
+          "cost": 3000,
+          "created_at": "2024-10-27T05:00:22.397Z"
+        }
+      ],
+      "total": 3000,
+      "tax": 210.00000000000003,
+      "netTotal": 3210,
+      "id": 5
+    },
+    {
+      "voucher_id": "M2R6VSDWEVQ6",
+      "customer_name": "mgmg",
+      "customer_email": "mg@gmail.com",
+      "sale_date": "2024-10-27",
+      "checked-checkbox": true,
+      "records": [
+        {
+          "id": 1730009339032,
+          "product": {
+            "id": 6,
+            "product_name": "Web Application Development",
+            "price": 10000,
+            "created_at": "2024-09-19T10:20:30Z"
+          },
+          "quantity": "1",
+          "cost": 10000,
+          "created_at": "2024-10-27T06:08:59.032Z"
+        }
+      ],
+      "total": 10000,
+      "tax": 700.0000000000001,
+      "netTotal": 10700,
+      "id": 6
+    },
+    {
+      "voucher_id": "M2RAGA5KH62C",
+      "customer_name": "min",
+      "customer_email": "min@gmail.com",
+      "sale_date": "2024-10-27",
+      "checked-checkbox": false,
+      "redirect_to_detail": true,
+      "all_correct": true,
+      "records": [
+        {
+          "id": 1730015506514,
+          "product": {
+            "id": 8,
+            "product_name": "API Development and Integration",
+            "price": 4500,
+            "created_at": "2024-09-21T15:30:20Z"
+          },
+          "quantity": "1",
+          "cost": 4500,
+          "created_at": "2024-10-27T07:51:46.514Z"
+        }
+      ],
+      "total": 4500,
+      "tax": 315.00000000000006,
+      "netTotal": 4815,
+      "id": 7
+    },
+    {
+      "voucher_id": "M2RL38XBSVTX",
+      "customer_name": "mgmg",
+      "customer_email": "mg@gmail.com",
+      "sale_date": "2024-10-27",
+      "redirect_to_detail": false,
+      "all_correct": true,
+      "records": [
+        {
+          "id": 1730033211114,
+          "product": {
+            "id": 3,
+            "product_name": "Website Maintenance and Support",
+            "price": 1200,
+            "created_at": "2024-09-16T14:25:30Z"
+          },
+          "quantity": "1",
+          "cost": 1200,
+          "created_at": "2024-10-27T12:46:51.115Z"
+        },
+        {
+          "id": 1730033217414,
+          "product": {
+            "id": 1,
+            "product_name": "Custom Website Development",
+            "price": 5000,
+            "created_at": "2024-09-14T12:30:45Z"
+          },
+          "quantity": "2",
+          "cost": 10000,
+          "created_at": "2024-10-27T12:46:57.414Z"
+        }
+      ],
+      "total": 11200,
+      "tax": 784.0000000000001,
+      "netTotal": 11984,
+      "id": 8
+    }
+  ]
+}

@@ -1,0 +1,140 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "product_name": "Custom Website Development",
+      "price": 5000,
+      "created_at": "2024-09-14T12:30:45Z"
+    },
+    {
+      "id": 2,
+      "product_name": "E-commerce Website Setup",
+      "price": 8000,
+      "created_at": "2024-09-15T09:00:00Z"
+    },
+    {
+      "id": 3,
+      "product_name": "Website Maintenance and Support",
+      "price": 1200,
+      "created_at": "2024-09-16T14:25:30Z"
+    },
+    {
+      "id": 4,
+      "product_name": "SEO Optimization Service",
+      "price": 2500,
+      "created_at": "2024-09-17T11:45:10Z"
+    },
+    {
+      "id": 5,
+      "product_name": "Responsive Web Design Service",
+      "price": 4000,
+      "created_at": "2024-09-18T16:10:50Z"
+    },
+    {
+      "id": 6,
+      "product_name": "Web Application Development",
+      "price": 10000,
+      "created_at": "2024-09-19T10:20:30Z"
+    },
+    {
+      "id": 7,
+      "product_name": "CMS Integration Service",
+      "price": 3500,
+      "created_at": "2024-09-20T13:50:45Z"
+    },
+    {
+      "id": 8,
+      "product_name": "API Development and Integration",
+      "price": 4500,
+      "created_at": "2024-09-21T15:30:20Z"
+    },
+    {
+      "id": 9,
+      "product_name": "UI/UX Design Service",
+      "price": 3000,
+      "created_at": "2024-09-22T17:10:15Z"
+    },
+    {
+      "id": 10,
+      "product_name": "Website Speed Optimization",
+      "price": 2200,
+      "created_at": "2024-09-23T08:45:00Z"
+    }
+  ],
+  "vouchers": [
+    {
+      "voucher_id": "M2QCFA5UBAG3",
+      "customer_name": "John ",
+      "customer_email": "hhh@gmail.com",
+      "sale_date": "2024-10-26",
+      "checked-checkbox": true,
+      "records": [],
+      "total": 0,
+      "tax": 0,
+      "netTotal": 0,
+      "id": 1
+    },
+    {
+      "voucher_id": "M2QCRUCXC6E7",
+      "customer_name": "John ",
+      "customer_email": "hhh@gmail.com",
+      "sale_date": "2024-10-26",
+      "checked-checkbox": true,
+      "records": [
+        {
+          "id": 1729958758743,
+          "product": {
+            "id": 1,
+            "product_name": "Custom Website Development",
+            "price": 5000,
+            "created_at": "2024-09-14T12:30:45Z"
+          },
+          "quantity": "1",
+          "cost": 5000,
+          "created_at": "2024-10-26T16:05:58.743Z"
+        }
+      ],
+      "total": 5000,
+      "tax": 350.00000000000006,
+      "netTotal": 5350,
+      "id": 2
+    },
+    {
+      "voucher_id": "M2QCS8TRMGMG",
+      "customer_name": "kyaw",
+      "customer_email": "kyaw@gmail.com",
+      "sale_date": "2024-10-26",
+      "checked-checkbox": true,
+      "records": [
+        {
+          "id": 1729958863230,
+          "product": {
+            "id": 2,
+            "product_name": "E-commerce Website Setup",
+            "price": 8000,
+            "created_at": "2024-09-15T09:00:00Z"
+          },
+          "quantity": "1",
+          "cost": 8000,
+          "created_at": "2024-10-26T16:07:43.230Z"
+        },
+        {
+          "id": 1729958867575,
+          "product": {
+            "id": 3,
+            "product_name": "Website Maintenance and Support",
+            "price": 1200,
+            "created_at": "2024-09-16T14:25:30Z"
+          },
+          "quantity": "1",
+          "cost": 1200,
+          "created_at": "2024-10-26T16:07:47.575Z"
+        }
+      ],
+      "total": 9200,
+      "tax": 644.0000000000001,
+      "netTotal": 9844,
+      "id": 3
+    }
+  ]
+}
