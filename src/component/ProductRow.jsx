@@ -9,17 +9,25 @@ import ShowDate from "./ShowDate";
 
 leapfrog.register();
 
-const ProductRow = ({ product: { id, product_name, price, created_at } }) => {
+const ProductRow = ({
+  product: { id, product_name, price, created_at, updated_at },
+}) => {
   const { mutate } = useSWRConfig();
   const [isDeleting, setIsDeleting] = React.useState(false);
 
   const handleDeleteBtn = async () => {
     setIsDeleting(true);
-    await fetch(import.meta.env.VITE_API_URL + `/products/${id}`, {
+    const res = await fetch(import.meta.env.VITE_API_URL + `/products/${id}`, {
       method: "DELETE",
     });
-    mutate(import.meta.env.VITE_API_URL + "/products");
-    toast.success("Product deleted successfully");
+
+    const json = await res.json();
+    if (res.status == 200) {
+      mutate(import.meta.env.VITE_API_URL + "/products");
+      toast.success(json.message);
+    } else {
+      toast.error(json.message);
+    }
   };
   return (
     <tr className="bg-white border-b dark:bg-stone-800 dark:border-stone-700">
@@ -38,6 +46,9 @@ const ProductRow = ({ product: { id, product_name, price, created_at } }) => {
       <td className="px-6 py-4 text-end">{price}</td>
       <td className="px-6 py-4 text-end">
         <ShowDate timestamp={created_at} />
+      </td>
+      <td className="px-6 py-4 text-end">
+        <ShowDate timestamp={updated_at} />
       </td>
       <td className="px-6 py-4">
         <div className="flex rounded-md shadow-sm justify-end">

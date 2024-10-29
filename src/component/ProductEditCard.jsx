@@ -18,6 +18,7 @@ const ProductEditCard = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+
   const { id } = useParams();
 
   const { data, isLoading, error } = useSWR(
@@ -28,7 +29,7 @@ const ProductEditCard = () => {
   const navigate = useNavigate();
   const [isPending, setIsPending] = useState(false);
 
-  const handleCreateProduct = async (data) => {
+  const handleUpdateProduct = async (data) => {
     setIsPending(true);
     const dateTime = new Date().toISOString();
     await fetch(import.meta.env.VITE_API_URL + "/products" + `/${id}`, {
@@ -67,7 +68,7 @@ const ProductEditCard = () => {
         </div>
       ) : (
         <form
-          onSubmit={handleSubmit(handleCreateProduct)}
+          onSubmit={handleSubmit(handleUpdateProduct)}
           className="space-y-6 sm:space-y-5"
         >
           <div>
@@ -84,9 +85,9 @@ const ProductEditCard = () => {
                 {...register("product_name", {
                   required: true,
                   minLength: 3,
-                  maxLength: 20,
+                  maxLength: 50,
                 })}
-                defaultValue={data?.product_name}
+                defaultValue={data?.data?.product_name}
                 className={`bg-gray-50 border ${
                   errors.product_name
                     ? "border-red-500 focus:ring-red-500 focus:border-red-500"
@@ -122,10 +123,9 @@ const ProductEditCard = () => {
                 id="product_price"
                 {...register("price", {
                   required: true,
-                  min: 500,
-                  pattern: /^[0-9]+$/,
+                  min: 100,
                 })}
-                defaultValue={data?.price}
+                defaultValue={data?.data?.price}
                 className={`${
                   errors.price
                     ? "border-red-500 focus:ring-red-500 focus:border-red-500"
@@ -141,11 +141,6 @@ const ProductEditCard = () => {
               {errors.price?.type === "min" && (
                 <p className="text-red-500 text-sm mt-1 ">
                   Product Price must be at least 10
-                </p>
-              )}
-              {errors.price?.type === "pattern" && (
-                <p className="text-red-500 text-sm mt-1 ">
-                  Product Price must be a number
                 </p>
               )}
             </div>

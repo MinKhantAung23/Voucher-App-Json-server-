@@ -7,28 +7,30 @@ import ProductListSkeletonLoader from "./ProudctListSkeletonLoader";
 import VoucherEmptyStage from "./VoucherEmptyStage";
 import VoucherListRow from "./VoucherListRow";
 import { debounce, throttle } from "lodash";
+import Pagination from "./Pagination";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 const VoucherList = () => {
-  const [search, setSearch] = useState();
-  const ref = useRef();
-  const { data, isLoading, error } = useSWR(
-    search
-      ? `${import.meta.env.VITE_API_URL}/vouchers?voucher_id_like=${search}`
-      : `${import.meta.env.VITE_API_URL}/vouchers`,
-    fetcher
+  const [fetchUrl, setFetchUrl] = useState(
+    import.meta.env.VITE_API_URL + "/vouchers"
   );
+  const ref = useRef();
+  const { data, isLoading, error } = useSWR(fetchUrl, fetcher);
 
   const handleSearch = debounce((e) => {
-    setSearch(e.target.value);
+    setFetchUrl(`${import.meta.env.VITE_API_URL}/vouchers?q=${e.target.value}`);
   }, 500);
 
   const handleClearSearch = () => {
-    setSearch("");
     ref.current.value = "";
   };
+
+  const updateFetchUrl = (url) => {
+    setFetchUrl(url);
+  };
+
   return (
-    <div className="mt-6">
+    <div className="mt-4">
       <div className="flex justify-between mb-4">
         <div className="relative">
           <div className="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
@@ -43,14 +45,14 @@ const VoucherList = () => {
             placeholder="Search Voucher"
             required
           />
-          {search && (
+          {/* {search && (
             <button
               onClick={handleClearSearch}
               className="absolute inset-y-0 end-1 flex items-center ps-3 "
             >
               <HiXCircle />
             </button>
-          )}
+          )} */}
         </div>
         <div>
           <Link
@@ -86,16 +88,23 @@ const VoucherList = () => {
           <tbody>
             {isLoading ? (
               <ProductListSkeletonLoader />
-            ) : data.length === 0 ? (
+            ) : data?.data?.length === 0 ? (
               <VoucherEmptyStage />
             ) : (
-              data.map((voucher) => (
+              data?.data?.map((voucher) => (
                 <VoucherListRow key={voucher.id} voucher={voucher} />
               ))
             )}
           </tbody>
         </table>
       </div>
+      {!isLoading && (
+        <Pagination
+          links={data?.links}
+          meta={data?.meta}
+          updateFetchUrl={updateFetchUrl}
+        />
+      )}
     </div>
   );
 };

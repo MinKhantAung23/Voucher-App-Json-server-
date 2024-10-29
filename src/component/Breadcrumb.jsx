@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Breadcrumb = ({ paths }) => {
   return (
-    <nav className="flex my-4" aria-label="Breadcrumb">
+    <nav className="flex mt-4" aria-label="Breadcrumb">
       <ol className="inline-flex items-center space-x-1 md:space-x-3">
         <Link
           to={"/"}

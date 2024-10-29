@@ -57,12 +57,12 @@ const VoucherCard = () => {
         <div className="flex justify-between items-start mb-8">
           <div>
             <h1 className="text-4xl font-bold mb-2">INVOICE</h1>
-            <p className="text-xl">{data.voucher_id}</p>
+            <p className="text-xl">{data?.data?.voucher_id}</p>
           </div>
           <div className="text-right">
             <p className="font-bold">Invoice to</p>
-            <p>{data.customer_name}</p>
-            <p>Date: {data.sale_date}</p>
+            <p>{data?.data?.customer_name}</p>
+            <p>Date: {data?.data?.sale_date}</p>
           </div>
         </div>
 
@@ -77,7 +77,7 @@ const VoucherCard = () => {
             </tr>
           </thead>
           <tbody>
-            {data.records.map((record, index) => (
+            {data?.data?.records.map((record, index) => (
               <tr key={record.id} className="border-b border-gray-200">
                 <td className="py-2 text-sm">{index + 1}</td>
                 <td className="py-2 text-sm">{record.product.product_name}</td>
@@ -95,21 +95,23 @@ const VoucherCard = () => {
                 Total
               </td>
               <td className="py-2 text-right text-sm">
-                {data.total.toFixed(2)}
+                {parseFloat(data?.data?.total).toFixed(2)}
               </td>
             </tr>
             <tr className="border-b border-gray-200">
               <td className="py-2 text-right text-sm" colSpan={4}>
                 Tax
               </td>
-              <td className="py-2 text-right text-sm">{data.tax.toFixed(2)}</td>
+              <td className="py-2 text-right text-sm">
+                {parseFloat(data?.data?.tax).toFixed(2)}
+              </td>
             </tr>
             <tr className="border-b border-gray-200">
               <td className="py-2 text-right text-sm" colSpan={4}>
                 Net Total
               </td>
               <td className="py-2 text-right text-sm">
-                {data.netTotal.toFixed(2)}
+                {parseFloat(data?.data?.net_total).toFixed(2)}
               </td>
             </tr>
           </tfoot>
